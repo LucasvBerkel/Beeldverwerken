@@ -1,18 +1,7 @@
-pic1 = imread('testImage.png');
-pic2 = imread('testImage1.png');
+im = imread('attachments/calibrationpoints.jpg');
+im = im2double(rgb2gray(im));
 
-pic3 = imread('attachments\cameraman.jpg');
+matrix = rotation(30, im)
 
-function color = pixelValue(image, x, y, method)
-% pixel value at real coordinates
-if inImage ( size ( image ) ,x , y )
-    % do the interpolation
-    switch ( method )
-        case 'nearest'
-            return ;
-        case 'linear'
-            % Do bilinear interpolation
-    end %end switch
-else
-    % return a constant
-end
+matrix*[1; 1; 1]
+matrix*[320; 240; 1]
