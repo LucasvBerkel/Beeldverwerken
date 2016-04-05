@@ -1,6 +1,6 @@
 im = imread('attachments/calibrationpoints.jpg');
 
-rad = degreesToRadian(30);
+rad = degreesToRadian(60);
 [heightOriginalImage, widthOriginalImage, ~] = size(im);
 [newHeight, newWidth] = calculateBorder(rad, heightOriginalImage, widthOriginalImage);
 newImage = zeros(floor(newHeight+1), floor(newWidth+1));
@@ -24,18 +24,8 @@ for k=1:heightOriginalImage
     end
 end
 
-matrix = rotation(rad, newImage);
-newVector = matrix*[397;368;1]
-% for a=1:newHeight
-%     for b=1:newWidth
-%         a
-%         b
-%         newVector = matrix*[a;b;1]
-%         [colorR, colorG, colorB] = pixelValue(newImage, newVector(1), newVector(2), 'nearest');
-%         newImage(a,b,1) = colorR;
-%         newImage(a,b,2) = colorG;
-%         newImage(a,b,3) = colorB;
-%     end
-% end
+matrix = rotation(rad, im);
 
-image(newImage)
+for a=1:newHeight
+    for b=1:newWidth
+        [colorR, colorG, col]
