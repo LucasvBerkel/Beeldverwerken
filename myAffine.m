@@ -9,19 +9,22 @@ r = zeros (N, M); % allocate new image of correct size
 B = [ x1 , x2 , x3 ; y1 , y2 , y3];
 A = [ 1 , M , M ; 1 , 1 , N; 1 1 1];
 X = B / A ;
-for xa = 1: M
-    for ya = 1: N
-        newVector = X*[xa; ya; 1];
-        r(ya, xa) = pixelValue ( image , newVector(1) , newVector(2) , method );
-    end
-end
 
-% matrix = createMatrix(M, N);
-% newMatrix = X*matrix;
-% [length, ~] = size(matrix);
-% for i=1:length
-%     newVector = newMatrix(:,i);
-%     oldVector = matrix(:,i);
-%     r(oldVector(1), oldVector(2)) = pixelValue ( image , newVector(1) , newVector(2) , method );
-% end
+% for xa = 1: M
+%     for ya = 1: N
+%         newVector = X*[xa; ya; 1];
+%         r(ya, xa) = pixelValue ( image , newVector(1) , newVector(2) , method );
+%     end
+% en
+
+matrix = createMatrix(N, M);
+newMatrix = X*matrix;
+[~, length] = size(matrix);
+size(matrix)
+size(newMatrix)
+for i=1:length
+    newVector = newMatrix(:,i);
+    oldVector = matrix(:,i);
+    r(oldVector(2), oldVector(1)) = pixelValue (image ,newVector(1) ,newVector(2) ,method );
+end
 end

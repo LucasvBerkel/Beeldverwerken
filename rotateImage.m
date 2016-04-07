@@ -1,4 +1,4 @@
-function [ newImage ] = rotateImage( im, degrees )
+function [ newImage ] = rotateImage( im, degrees, method )
 
 rad = degreesToRadian(degrees);
 [heightOriginalImage, widthOriginalImage] = size(im);
@@ -24,7 +24,7 @@ newPixelsMatrix = matrix*pixelsMatrix;
 
 for i=1:length
     oldLocationVector = newPixelsMatrix(:,i);
-    color = pixelValue(storageImage, oldLocationVector(1), oldLocationVector(2), 'linear');
+    color = pixelValue(storageImage, oldLocationVector(1), oldLocationVector(2), method);
     newLocationVector = pixelsMatrix(:,i);
     newImage(newLocationVector(1),newLocationVector(2)) = color;
 end
