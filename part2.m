@@ -1,5 +1,4 @@
 im = imread('attachments/calibrationpoints.jpg');
-im = im2double(rgb2gray(im));
 
 % x = 10;
 % y = 10;

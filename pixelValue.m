@@ -1,7 +1,7 @@
 function [ colorR, colorG, colorB ] = pixelValue(image, x, y, method)
 % pixel value at real coordinates
-sizeIm = size(image);
-if inImage(sizeIm(1), sizeIm(2), x , y )
+[height, width, ~] = size(image);
+if inImage(height, width, x , y )
     % do the interpolation
     switch ( method )
         case 'nearest'
@@ -34,7 +34,7 @@ if inImage(sizeIm(1), sizeIm(2), x , y )
     end %end switch
 else
     colorR = 0;
-    colorG = 65;
+    colorG = 0;
     colorB = 0;
 end
 

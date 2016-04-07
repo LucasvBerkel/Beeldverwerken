@@ -1,6 +1,6 @@
 im = imread('attachments/cameraman.jpg');
 
-degrees = 30;
+degrees = 45;
 
 rad = degreesToRadian(degrees);
 [heightOriginalImage, widthOriginalImage, ~] = size(im);
@@ -22,8 +22,7 @@ for i=1:heightOriginalImage
     end
 end
 
-[m1, m2, m3] = rotationTemp(rad, newImage);
-matrix = m3*m2*m1;
+matrix = rotation(rad, newImage);
 storageImage = newImage;
 [newHeight, newWidth, ~] = size(newImage);
 pixelsMatrix = createMatrix(newHeight, newWidth);
