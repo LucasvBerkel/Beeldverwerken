@@ -1,4 +1,5 @@
 function [ newImage ] = rotateImage( im, degrees, method )
+%% Function rotates given image with around given degrees using given method.
 
 rad = degreesToRadian(degrees);
 [heightOriginalImage, widthOriginalImage] = size(im);

@@ -1,3 +1,7 @@
+% Part 5 of assignment
+% Loads the image and enables the user to select four points(in order leftup, rightup, rightdown, leftdown)
+% And produces the new transformed image
+
 % load and show image
 im = imread('attachments/flyers.png');
 im = im2double(im);

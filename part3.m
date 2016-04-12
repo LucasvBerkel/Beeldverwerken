@@ -1,3 +1,8 @@
+% Part 3 of the assignment
+% Takes the image and rotates it 45 degrees counterclockwise and 45 degrees
+% clockwise. After the border is removed and the perfomance of the two
+% pixel value methods are compared.
+
 im = imread('attachments/cameraman.jpg');
 im = im2double(im);
 im = rgb2gray(im);

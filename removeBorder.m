@@ -1,4 +1,6 @@
 function [ newImage ] = removeBorder( image, heightOr, widthOr )
+%% Function removes the black border around the original image
+
 newImage = zeros(heightOr, widthOr);
 [height, width] = size(image);
 startValueHeight = (height/2)-(heightOr/2);

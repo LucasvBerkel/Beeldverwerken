@@ -1,4 +1,6 @@
 function line = profile ( image , x0 , y0 , x1 , y1 , n , method )
+%% Function shows efficiency of nearest and bilinear interpolation
+
 % profile of an image along straight line in n points
 x = linspace ( x0 , x1 , n ); y = linspace ( y0 , y1 , n );
 for i = 1: length ( x )

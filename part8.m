@@ -1,3 +1,6 @@
+% Part 8 of the assignment
+% It loads the values already given and calculates the remaining coordinates for the cube and plots them
+
 im = imread('attachments/calibrationpoints.jpg');
 im = im2double(im);
 im = rgb2gray(im);

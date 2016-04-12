@@ -1,4 +1,5 @@
 function projMatrix = createProjectionMatrix( xy, uv)
+%% Produces a projectionMatrix in order to perform the projection
 x = xy (: , 2);
 y = xy (: , 1);
 
@@ -13,5 +14,5 @@ A = [ Aoddrows ; Aevenrows ];
 [~, ~, V] = svd(A); 
 m = V(:, end); 
 
-projMatrix = reshape(m, 3, 3);
+projMatrix = reshape(m, 3, 3)';
 end

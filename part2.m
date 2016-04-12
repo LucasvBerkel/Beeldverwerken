@@ -1,3 +1,6 @@
+% Part 2 of the assignment
+% Loads an image and compares the two pixelvalue methods.
+
 im = imread('attachments/calibrationpoints.jpg');
 im = im2double(im);
 im = rgb2gray(im);

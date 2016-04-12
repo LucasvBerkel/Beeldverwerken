@@ -1,4 +1,5 @@
 function r = myAffine ( image , a, b, c, M , N , method )
+%% Function performs the affine transformation given the four points
 x1 = a(1);
 y1 = a(2);
 x2 = b(1);
@@ -10,18 +11,9 @@ B = [ x1 , x2 , x3 ; y1 , y2 , y3];
 A = [ 1 , M , M ; 1 , 1 , N; 1 1 1];
 X = B / A ;
 
-% for xa = 1: M
-%     for ya = 1: N
-%         newVector = X*[xa; ya; 1];
-%         r(ya, xa) = pixelValue ( image , newVector(1) , newVector(2) , method );
-%     end
-% en
-
 matrix = createMatrix(N, M);
 newMatrix = X*matrix;
 [~, length] = size(matrix);
-size(matrix)
-size(newMatrix)
 for i=1:length
     newVector = newMatrix(:,i);
     oldVector = matrix(:,i);

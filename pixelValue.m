@@ -1,4 +1,6 @@
 function [ color] = pixelValue(image, x, y, method)
+%% Returns the value of the pixel nearest or using bilinear interpolation..
+
 % pixel value at real coordinates
 [height, width] = size(image);
 if inImage(height, width, x , y )

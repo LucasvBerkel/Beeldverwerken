@@ -1,4 +1,5 @@
 function [ faces ] = retrieveCubePoints(projMatrix, position)
+%% Function takes projectionMatrix and calculates the position of the faces
 faces = createCube(1, position);
 for i=1:6
     for j=1:5

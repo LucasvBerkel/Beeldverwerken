@@ -1,4 +1,5 @@
 function projMatrix = estimateProjectionMatrix( XYZ, uv)
+%% Creates a projectionMatrix in order to calculate the new origin
 x = XYZ (: , 1);
 y = XYZ (: , 2);
 z = XYZ (: , 3);

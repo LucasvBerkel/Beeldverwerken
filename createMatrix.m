@@ -1,4 +1,5 @@
 function [ resultingMatrix ] = createMatrix( height, width )
+%% Produces a matrix with every possible pixel combination
 matrix = ones(3, height*width);
 widthRow = [];
 heightRow = [];

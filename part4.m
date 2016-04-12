@@ -1,3 +1,7 @@
+% Part 4 of the assignment
+% Loads image and perfoms the affine transformation
+% For now the points selected, produces the 45 degrees rotation
+
 im = imread('attachments\cameraman.jpg');
 im = im2double(im);
 im = rgb2gray(im);
