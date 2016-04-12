@@ -17,7 +17,6 @@ tic
 newImageLinear = rotateImage(newImageLinear, -45, 'linear');
 toc
 newImageLinear = removeBorder(newImageLinear, height, width);
-
 disp('nearest:')
 tic
 newImageNearest = rotateImage(im, 45, 'nearest');

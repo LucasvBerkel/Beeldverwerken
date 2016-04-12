@@ -10,3 +10,7 @@ plot ( profile ( im , 100 , 100 , 130 , 130 , 200 , 'linear') , 'b' );
 plot ( profile ( im , 100 , 100 , 130 , 130 , 200 , 'nearest') , 'r' );
 hold off ;
 
+xlabel('pixel number');
+ylabel('pixelvalue');
+title('Comparing linear and nearest pixelvalue retrieval')
+legend({'linear' 'nearest'})
