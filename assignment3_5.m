@@ -23,6 +23,7 @@ imshow (F , []);
 hold on ;
 quiver ( xx , yy , Fx , Fy , 'r ' );
 hold off ;
+
 %%
 imageX = gD(F, 1, 1, 0);
 imageY = gD(F, 1, 0, 1);
