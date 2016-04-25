@@ -42,3 +42,22 @@ quiver ( xx , yy , Gx , Gy , 'r ' );
 hold off ;
 
 %%
+H = rotateImage(F, 10, 'linear');
+imageX = gD(H, 1, 1, 0);
+imageY = gD(H, 1, 0, 1);
+xx = 1:10:233;
+yy = 1:10:233;
+Gx = zeros(24, 24);
+Gy = zeros(24, 24);
+for i=1:24
+    for j=1:24
+        Gx(i, j) = imageX(xx(i), yy(j));
+        Gy(i, j) = imageY(xx(i), yy(j));
+    end
+end
+imshow (H , []);
+hold on ;
+quiver ( xx , yy , Gx*50 , Gy*50 , 'r ');
+hold off ;
+
+%% 
