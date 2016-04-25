@@ -11,8 +11,10 @@ e = sum(Gauss(5));
 
 im = rgb2gray(im2double(imread('cameraman.jpg')));
 
-h = imfilter(im, Gauss(5), 'conv', 'replicate');
-imshow(h)
+f = imfilter(im, Gauss(5), 'conv', 'replicate');
+imshow(f)
 figure
-g = imfilter(im, Gauss(1), 'conv', 'replicate');
+g = imfilter(im, Gauss1(5), 'conv', 'replicate');
+g = imfilter(g, Gauss1(5)', 'conv', 'replicate');
 imshow(g)
+

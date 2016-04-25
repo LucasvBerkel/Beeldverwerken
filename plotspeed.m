@@ -6,8 +6,8 @@
 % Load image, define amount of runs, reset counter
 im = rgb2gray(im2double(imread('cameraman.jpg')));
 average = 0;
-times = 100;
-scale = 10;
+times = 25;
+scale = 50;
 
 % Per scale, execute the runs, calculate and store the average runtime 
 for j = 1:scale
