@@ -6,14 +6,13 @@
 function [ image ] = gD(f, sigma, xorder, yorder)
     switch xorder
         case 1
-            image = firstOrderGaussianDerivative(f, sigma)
+            firstOrderGaussianDerivative
         case 2
-            image = secondOrderGaussianDerivative(f, sigma)
+            secondOrderGaussianDerivative
     end
     switch yorder
         case 1
-            image = firstOrderGaussianDerivative(f, sigma)
+            ..
         case 2
-            image = firstOrderGaussianDerivative(f, sigma)
 end
 
