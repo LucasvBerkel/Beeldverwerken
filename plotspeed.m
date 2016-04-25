@@ -5,17 +5,18 @@
 
 % Load image, define amount of runs, reset counter
 im = rgb2gray(im2double(imread('cameraman.jpg')));
-times = 10;
-elapsedTime = 0;
+average = 0;
+times = 100;
+scale = 10;
 
-% Execute run, store runtimes
-for i = 2:times
-    tic;
-    H = imfilter (im, Gauss(3) ,'conv' , 'replicate');
-    toc;
-    elapsedTime(i) = elapsedTime(i-1) + toc;
+% Per scale, execute the runs, calculate and store the average runtime 
+for j = 1:scale
+    elapsedTime = 0;
+    for i = 1:times
+        tic;
+        H = imfilter (im, Gauss(j) ,'conv' , 'replicate');
+        elapsedTime = elapsedTime + toc;
+    end
+    average(j) = elapsedTime/times;
 end
-
-% Plot runtimes, calculate average
-plot(elapsedTime)
-average = elapsedTime(times)/times
+plot(average)
