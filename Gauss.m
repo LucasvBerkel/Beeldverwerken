@@ -9,7 +9,8 @@ size = size + mod(size+1,2);
 gauss = zeros(size,size);
 for i=1:size
     for j=1:size
-        distance = sqrt(((i-(floor(size/2)+1))^2)+((j-(floor(size/2)+1))^2));
+        distance(1) = i-(floor(size/2)+1);
+        distance(2) = j-(floor(size/2)+1);
         gauss(i, j) = gaussian(sigma, 2, distance);
     end
 end

@@ -4,16 +4,23 @@
 % Gideon Mooijen, 10686290
 
 function [ image ] = gD(f, sigma, xorder, yorder)
-    switch xorder
-        case 1
-            image = firstOrderGaussianDerivative(f, sigma)
-        case 2
-            image = secondOrderGaussianDerivative(f, sigma)
+    kernelX = 1;
+    kernelY = 1;
+    if isequal(xorder,1)
+        kernelX = firstOrderGaussianDerivative(sigma) 
     end
-    switch yorder
-        case 1
-            image = firstOrderGaussianDerivative(f, sigma)
-        case 2
-            image = firstOrderGaussianDerivative(f, sigma)
-end
+    if isequal(yorder,1)
+        kernelY = firstOrderGaussianDerivative(sigma) 
+    end
+    if isequal(xorder,2)
+        kernelX = secondOrderGaussianDerivative(sigma) 
+    end
+    if isequal(yorder,2)
+        kernelY = secondOrderGaussianDerivative(sigma) 
+    end    
+    image = imfilter(f, kernelX, 'conv', 'replicate');
+    image = imfilter(image, kernelY', 'conv', 'replicate');
+    figure
+    imshow(image, [])
 
+end
