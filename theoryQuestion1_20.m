@@ -8,7 +8,7 @@ if(strcmp(request, 'mean'))
     g = 1/9*[1 1 1; 1 1 1; 1 1 1];
 elseif(strcmp(request, 'blur'))
     disp('Blur')
-    g = 1/8*[0 1 0; 1 4 1; 0 1 0];
+    g = 1/16*[1 2 1; 2 4 2; 1 2 1];
 elseif(strcmp(request, 'unsharp mask'))
     disp('Unsharp mask')
     g = 1/8*[0 -1 0; -1 12 -1; 0 -1 0];
