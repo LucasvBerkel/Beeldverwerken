@@ -4,8 +4,7 @@
 % Gideon Mooijen, 10686290
 
 function [ kernel ] = firstOrderGaussianDerivative( sigma )
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+% Calculates the first derivative of the gaussian kernel
 size = floor(sigma*2.5);
 size = size + mod(size+1,2);
 kernel = zeros(1, size);

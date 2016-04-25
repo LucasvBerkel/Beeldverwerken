@@ -4,6 +4,8 @@
 % Gideon Mooijen, 10686290
 
 function [ gauss ] = Gauss1( sigma )
+% Performs the same calculation as Gauss but returns a 1*M kernel instead
+% of a M*M kernel.
 size = floor(sigma*2.5);
 size = size + mod(size+1,2);
 gauss = zeros(1, size);

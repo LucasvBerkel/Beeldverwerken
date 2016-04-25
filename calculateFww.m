@@ -1,4 +1,5 @@
 function [ fww ] = calculateFww( im, sigma )
+% Receives the image and calculates the fww using the given formula
 fx = gD(im, sigma, 1, 0);
 fy = gD(im, sigma, 0, 1);
 

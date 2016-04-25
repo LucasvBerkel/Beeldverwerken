@@ -4,6 +4,8 @@
 % Gideon Mooijen, 10686290
 
 function [gauss] = Gauss(sigma)
+% Calculates the gaussian kernel, the size of the kernel is approximatly
+% 2.5 sigma.
 size = floor(sigma*2.5);
 size = size + mod(size+1,2);
 gauss = zeros(size,size);

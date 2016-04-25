@@ -4,6 +4,7 @@
 % Gideon Mooijen, 10686290
 
 function [ image ] = gD(f, sigma, xorder, yorder)
+% Returns the desired derivative of image
     kernelX = 1;
     kernelY = 1;
     if isequal(xorder,1)
