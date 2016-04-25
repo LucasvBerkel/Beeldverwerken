@@ -17,7 +17,7 @@ yy = 1:10:201;
 [ XX , YY ] = meshgrid ( xx , yy );
 fOverX = A * V * cos( V * XX );
 fOverY = - B * W * sin( W * YY );
-Fx = fOverX;
+Fx = -fOverX;
 Fy = fOverY;
 imshow (F , []);
 hold on ;
@@ -41,3 +41,4 @@ hold on ;
 quiver ( xx , yy , Gx , Gy , 'r ' );
 hold off ;
 
+%%
