@@ -24,4 +24,20 @@ hold on ;
 quiver ( xx , yy , Fx , Fy , 'r ' );
 hold off ;
 %%
+imageX = gD(F, 1, 1, 0);
+imageY = gD(F, 1, 0, 1);
+xx = 1:10:201;
+yy = 1:10:201;
+Gx = zeros(21, 21);
+Gy = zeros(21, 21);
+for i=1:21
+    for j=1:21
+        Gx(i, j) = imageX(xx(i), yy(j));
+        Gy(i, j) = imageY(xx(i), yy(j));
+    end
+end
+imshow (F , []);
+hold on ;
+quiver ( xx , yy , Gx , Gy , 'r ' );
+hold off ;
 
