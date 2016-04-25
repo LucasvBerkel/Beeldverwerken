@@ -20,7 +20,4 @@ function [ image ] = gD(f, sigma, xorder, yorder)
     end    
     image = imfilter(f, kernelX, 'conv', 'replicate');
     image = imfilter(image, kernelY', 'conv', 'replicate');
-    figure
-    imshow(image, [])
-
 end

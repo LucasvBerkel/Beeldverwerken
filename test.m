@@ -26,4 +26,4 @@ gD(im, 1, 1, 1);
 gD(im, 1, 2, 1);
 gD(im, 1, 1, 2);
 gD(im, 2, 2, 2);
-
+imshow(image, [])
