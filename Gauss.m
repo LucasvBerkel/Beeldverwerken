@@ -1,4 +1,9 @@
-function [ gauss ] = Gauss( sigma )
+% Beeldverwerken Opdracht 2
+% Part 2, Gaussian function
+% Lucas van Berkel, 10747958
+% Gideon Mooijen, 10686290
+
+function [gauss] = Gauss(sigma)
 size = 5;
 gauss = zeros(size,size);
 for i=1:size
